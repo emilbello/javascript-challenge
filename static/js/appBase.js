@@ -20,6 +20,9 @@ function displayTable(data) {
     })
 };
 
+// var checking = d3.select('input').property('value').trim().toLowerCase();
+// var pruebaFiltro = tableData.filter(data => data.tableData === checking)
+// console.log(pruebaFiltro)
 
 // creating an empty dict that will be populated with all filters input
 var filterList = {};
@@ -111,84 +114,3 @@ displayTable(tableData);
 // };
 
 // displayTable(data);
-
-
-
-// // from data.js
-// var tableData = data;
-// console.log(tableData)
-// // getting the reference to the table body
-// var tbody = d3.select('tbody')
-
-// // selecting the form group
-// var form = d3.select('#form');
-
-// // selecting the button that filters the information
-// var button = d3.select('#filter-btn');
-
-
-
-// function displayTable(data) {    
-//     tableData.forEach((sighting) => {
-//         var row = tbody.append('tr');
-//         Object.entries(sighting).forEach(([key, value]) => {
-//             var cell = row.append('td');
-//             cell.text(value);
-//         });
-//     })
-// };
-
-// var filtersList = {};
-
-// function activeFilters() {
-//     // obtaining the filters values from the input
-//     var filterValue = d3.select(this).select('input').property('value').trim().toLowerCase();
-//     // obtaninign the filter id for validation
-//     var filterID = d3.select(this).select('input').attr('id');
-//     // printing to the console for checks
-//     console.log(`filterValue: ${filterValue}`);
-//     console.log(`filterID: ${filterID}`);
-
-//     // append key, val in filtersList
-
-
-
-//     // 
-    
-//     tableData = tableData.filtersList(function(item) {
-//         for (var key in filtersList) {
-//           if (item[key] === undefined || item[key] != filterList[key])
-//             return false;
-//         }
-//         return true;
-//     });
-
-//     displayFiltered()
-    
-// };
-
-// function displayFiltered() {
-    
-//     var filteredTable = tableData; 
-//     //console.log(`filteredTable ${filteredTable}`);
-//     // console.log(`this is the filterlits: ${filterList}`)
-//     //loop gthrough the filters and match based on values
-//     Object.entries(filterList).forEach (([key, value]) =>
-//     {
-//         filteredTable = filteredTable.filter(row => row[key] === value);
-
-//     });
-//    //console.log(`filteredTable ${filteredTable}`);
-//     // reconstruct the table
-//     displayTable(filteredTable);    
-    
-// };
-
-// // creating event handlers for the button
-// d3.selectAll(".filter").on("change", activeFilters);
-// // button.on('click', activeFilters);
-// // form.on('change', runEnter); 
-
-
-
-// displayTable();
